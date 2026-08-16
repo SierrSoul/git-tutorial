@@ -8,13 +8,13 @@ TOKEN = os.getenv("BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     username = update.message.from_user.username
-    await update.message.reply_text(f"Привет! @{username}")
+    await update.message.reply_text(f"Hello! @{username}")
 
 async def info(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = (
-        "Вот что я умею:\n"
-        "/start — поздороваться с тобой\n"
-        "/info — показать список моих команд"
+        "What can i do:\n"
+        "/start — greetings\n"
+        "/info — list of my commands"
     )
     await update.message.reply_text(text)
 
